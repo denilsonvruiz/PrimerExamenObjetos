@@ -51,6 +51,14 @@ public class TestAnalytics {
 		assertEquals("[cosa, hola]", Arrays.toString(result), "Result is not as expected.");
 	}
 	
-	 
+	@Test
+	public void testPrimeraMasLarga() {
+		String[] testList = new String[3];
+		testList[0] = "sol";
+		testList[1] = "hola";
+		testList[2] = "pepe";
+		String[] result = Analytics.primeraMasLarga(testList);
+		assertEquals("[hola]", Arrays.toString(result), "Result is not as expected.");
+	}
 	
 }
