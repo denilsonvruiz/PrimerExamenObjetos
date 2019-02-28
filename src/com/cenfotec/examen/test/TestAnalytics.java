@@ -18,8 +18,17 @@ public class TestAnalytics {
 		testList[1] = "casita";
 		testList[2] = "casatota";
 		String[] result = Analytics.masLarga(testList);
-		System.out.println(testList.length);
-		System.out.println(Arrays.toString(result));
-		assertEquals("casatota", result[0], "Result is not as expected");
+		assertEquals("[casatota]", Arrays.toString(result), "Result is not as expected.");
+	}
+	
+	@Test
+	public void testMasCortaFunction() {
+		String[] testList = new String[4];
+		testList[0] = "casa";
+		testList[1] = "mia";
+		testList[2] = "cosa";
+		testList[3] = "ala";
+		String[] result = Analytics.masCorta(testList);
+		assertEquals("[mia, ala]", Arrays.toString(result), "Result is not as expected.");
 	}
 }

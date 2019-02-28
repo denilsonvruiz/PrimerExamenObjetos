@@ -22,4 +22,25 @@ public class Analytics {
 		}
 		return arrPalabras;
 	}
+	
+	public static String[] masCorta(String[] palabras) {
+		int lastSizeWord = 100000;
+		ArrayList<String> smallestWords = new ArrayList<String>();
+		for(int i=0; i<palabras.length; i++) {
+			if(palabras[i].length() == lastSizeWord) {
+				smallestWords.add(palabras[i]);
+				lastSizeWord = palabras[i].length();
+			}
+			if(palabras[i].length() < lastSizeWord) {
+				smallestWords = new ArrayList<String>();
+				smallestWords.add(palabras[i]);
+				lastSizeWord = palabras[i].length();
+			}
+		}
+		String[] arrPalabras = new String[smallestWords.size()];
+		for(int i=0; i<smallestWords.size(); i++) {
+			arrPalabras[i] = smallestWords.get(i);
+		}
+		return arrPalabras;
+	}
 }
