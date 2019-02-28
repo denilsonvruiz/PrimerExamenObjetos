@@ -29,6 +29,16 @@ public class TestAnalytics {
 		testList[2] = "cosa";
 		testList[3] = "ala";
 		String[] result = Analytics.masCorta(testList);
-		assertEquals("[mia, ala]", Arrays.toString(result), "Result is not as expected.");
+		assertEquals("[ala, mia]", Arrays.toString(result), "Result is not as expected.");
 	}
+	@Test
+	public void testMasLargaAbc() {
+		String[] testList = new String[3];
+		testList[0] = "ala";
+		testList[1] = "pepe";
+		testList[2] = "casa";
+		String[] result = Analytics.masLarga(testList);
+		assertEquals("[casa, pepe]", Arrays.toString(result), "Result is not as expected.");
+	}
+	
 }

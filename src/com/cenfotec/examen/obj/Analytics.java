@@ -1,5 +1,6 @@
 package com.cenfotec.examen.obj;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Analytics {
 	public static String[] masLarga(String[] palabras) {
@@ -16,6 +17,7 @@ public class Analytics {
 				lastSizeWord = palabras[i].length();
 			}
 		}
+		Collections.sort(longestWords, String.CASE_INSENSITIVE_ORDER);
 		String[] arrPalabras = new String[longestWords.size()];
 		for(int i=0; i<longestWords.size(); i++) {
 			arrPalabras[i] = longestWords.get(i);
@@ -37,6 +39,7 @@ public class Analytics {
 				lastSizeWord = palabras[i].length();
 			}
 		}
+		Collections.sort(smallestWords, String.CASE_INSENSITIVE_ORDER);
 		String[] arrPalabras = new String[smallestWords.size()];
 		for(int i=0; i<smallestWords.size(); i++) {
 			arrPalabras[i] = smallestWords.get(i);
