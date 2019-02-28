@@ -41,4 +41,14 @@ public class TestAnalytics {
 		assertEquals("[casa, pepe]", Arrays.toString(result), "Result is not as expected.");
 	}
 	
+	@Test
+	public void testMasCortaAbc() {
+		String[] testList = new String[3];
+		testList[0] = "casita";
+		testList[1] = "hola";
+		testList[2] = "cosa";
+		String[] result = Analytics.masCorta(testList);
+		assertEquals("[cosa, hola]", Arrays.toString(result), "Result is not as expected.");
+	}
+	
 }
