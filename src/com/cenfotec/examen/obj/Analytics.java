@@ -2,7 +2,7 @@ package com.cenfotec.examen.obj;
 import java.util.ArrayList;
 
 public class Analytics {
-	public String[] masLarga(String[] palabras) {
+	public static String[] masLarga(String[] palabras) {
 		int lastSizeWord = -1;
 		ArrayList<String> longestWords = new ArrayList<String>();
 		for(int i=0; i<palabras.length; i++) {
