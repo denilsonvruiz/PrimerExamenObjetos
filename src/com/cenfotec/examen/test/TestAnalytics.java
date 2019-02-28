@@ -13,50 +13,33 @@ public class TestAnalytics {
 
 	@Test
 	public void testMasLargaFunction() {
-		String[] testList = new String[3];
-		testList[0] = "casa";
-		testList[1] = "casita";
-		testList[2] = "casatota";
+		String testList = "casa,casita,casatota";
 		String[] result = Analytics.masLarga(testList);
 		assertEquals("[casatota]", Arrays.toString(result), "Result is not as expected.");
 	}
 	
 	@Test
 	public void testMasCortaFunction() {
-		String[] testList = new String[4];
-		testList[0] = "casa";
-		testList[1] = "mia";
-		testList[2] = "cosa";
-		testList[3] = "ala";
-		String[] result = Analytics.masCorta(testList);
+		String[] result = Analytics.masCorta("casa,mia,cosa,ala");
 		assertEquals("[ala, mia]", Arrays.toString(result), "Result is not as expected.");
 	}
 	@Test
 	public void testMasLargaAbc() {
-		String[] testList = new String[3];
-		testList[0] = "ala";
-		testList[1] = "pepe";
-		testList[2] = "casa";
+		String testList = "ala,pepe,casa";
 		String[] result = Analytics.masLarga(testList);
 		assertEquals("[casa, pepe]", Arrays.toString(result), "Result is not as expected.");
 	}
 	
 	@Test
 	public void testMasCortaAbc() {
-		String[] testList = new String[3];
-		testList[0] = "casita";
-		testList[1] = "hola";
-		testList[2] = "cosa";
+		String testList = "casita,hola,cosa";
 		String[] result = Analytics.masCorta(testList);
 		assertEquals("[cosa, hola]", Arrays.toString(result), "Result is not as expected.");
 	}
 	
 	@Test
 	public void testPrimeraMasLarga() {
-		String[] testList = new String[3];
-		testList[0] = "sol";
-		testList[1] = "hola";
-		testList[2] = "pepe";
+		String testList = "sol,hola,pepe";
 		String[] result = Analytics.primeraMasLarga(testList);
 		assertEquals("[hola]", Arrays.toString(result), "Result is not as expected.");
 	}

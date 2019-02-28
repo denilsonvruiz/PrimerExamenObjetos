@@ -3,7 +3,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Analytics {
-	public static String[] masLarga(String[] palabras) {
+	public static String[] masLarga(String stringPalabras) {
+		String [] palabras = stringPalabras.split(",");
+		System.out.println(palabras.length);
 		int lastSizeWord = -1;
 		ArrayList<String> longestWords = new ArrayList<String>();
 		for(int i=0; i<palabras.length; i++) {
@@ -25,7 +27,8 @@ public class Analytics {
 		return arrPalabras;
 	}
 	
-	public static String[] masCorta(String[] palabras) {
+	public static String[] masCorta(String stringPalabras) {
+		String [] palabras = stringPalabras.split(",");
 		int lastSizeWord = 100000;
 		ArrayList<String> smallestWords = new ArrayList<String>();
 		for(int i=0; i<palabras.length; i++) {
@@ -47,9 +50,9 @@ public class Analytics {
 		return arrPalabras;
 	}
 	
-	public static String[] primeraMasLarga(String[] arrPalabras) {
+	public static String[] primeraMasLarga(String palabras) {
 		String[] lstOnlyOneWord = new String[1];
-		lstOnlyOneWord[0] = masLarga(arrPalabras)[0];
+		lstOnlyOneWord[0] = masLarga(palabras)[0];
 		return lstOnlyOneWord;
 	}
 }
