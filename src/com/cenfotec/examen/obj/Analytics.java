@@ -46,4 +46,10 @@ public class Analytics {
 		}
 		return arrPalabras;
 	}
+	
+	public static String[] primeraMasLarga(String[] arrPalabras) {
+		String[] lstOnlyOneWord = new String[1];
+		lstOnlyOneWord[0] = masLarga(arrPalabras)[0];
+		return lstOnlyOneWord;
+	}
 }

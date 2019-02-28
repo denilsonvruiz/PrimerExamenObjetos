@@ -51,4 +51,6 @@ public class TestAnalytics {
 		assertEquals("[cosa, hola]", Arrays.toString(result), "Result is not as expected.");
 	}
 	
+	 
+	
 }
